@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Admin</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar" id="adminSidebar">
+            <div class="admin-sidebar-header">
+                <h2>🎓 Admin Panel</h2>
+            </div>
+            <ul class="admin-nav">
+                <li><a href="admin-dashboard.html">📊 Dashboard</a></li>
+                <li><a href="admin-students.html">👥 Students</a></li>
+                <li><a href="admin-curricula.html">📚 Curricula</a></li>
+                <li><a href="admin-lessons.html">📝 Lessons</a></li>
+                <li><a href="admin-tasks.html">✅ Tasks</a></li>
+                
+                <li><a href="admin-reports.html" class="active">📈 Reports</a></li>
+                <li><a href="admin-tracking.html">👀 Student Tracking</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            <div class="admin-header">
+                <button class="mobile-menu-btn" onclick="document.getElementById('adminSidebar').classList.toggle('open')">☰</button>
+                <div class="admin-header-title">
+                    <h1>Reports Generator</h1>
+                </div>
+            </div>
+
+            <div class="card" style="margin-bottom: 2rem;">
+                <div style="display:flex; gap:1rem; align-items:flex-end;">
+                    <div style="flex:1;">
+                        <label>Select Student</label>
+                        <select id="reportStudent" class="form-control" style="width:100%; padding:0.5rem;"></select>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" id="generateBtn">Generate Report</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="reportContainer" style="display:none;">
+                <div class="admin-header">
+                    <h2>Report Data</h2>
+                    <button class="btn btn-secondary" id="downloadPdfBtn">Download PDF</button>
+                </div>
+                <div class="card" id="reportContent">
+                    <!-- Report content -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/admin-reports.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curricula Management - Admin</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar Snippet -->
+        <aside class="admin-sidebar" id="adminSidebar">
+            <div class="admin-sidebar-header">
+                <h2>🎓 Admin Panel</h2>
+            </div>
+            <ul class="admin-nav">
+                <li><a href="admin-dashboard.html">📊 Dashboard</a></li>
+                <li><a href="admin-students.html">👥 Students</a></li>
+                <li><a href="admin-curricula.html" class="active">📚 Curricula</a></li>
+                <li><a href="admin-lessons.html">📝 Lessons</a></li>
+                <li><a href="admin-tasks.html">✅ Tasks</a></li>
+                
+                <li><a href="admin-reports.html">📈 Reports</a></li>
+                <li><a href="admin-tracking.html">👀 Student Tracking</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            <div class="admin-header">
+                <button class="mobile-menu-btn" onclick="document.getElementById('adminSidebar').classList.toggle('open')">☰</button>
+                <div class="admin-header-title">
+                    <h1>Curricula Management</h1>
+                </div>
+                <div class="admin-header-actions">
+                    <button class="btn btn-primary" id="addCurriculumBtn">+ Add Curriculum</button>
+                </div>
+            </div>
+
+            <div class="admin-table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Icon</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="curriculaTableBody">
+                        <tr><td colspan="5" style="text-align: center;">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/admin-curricula.js"></script>
+</body>
+</html>

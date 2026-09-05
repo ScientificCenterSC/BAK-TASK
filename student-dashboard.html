@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/student.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">Student Portal</div>
+        <div class="navbar-menu">
+            <span id="studentNameDisplay" style="margin-right: 1rem; font-weight: 500;"></span>
+            <button class="btn btn-outline" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <h2>Dashboard</h2>
+        
+        <div class="progress-ring-container">
+            <div class="progress-ring">
+                <svg>
+                    <circle class="bg-circle" cx="75" cy="75" r="64"></circle>
+                    <circle class="progress-circle" cx="75" cy="75" r="64" id="overallProgressRing"></circle>
+                </svg>
+                <div class="progress-text" id="overallProgressText">0%</div>
+            </div>
+            <div style="margin-left: 2rem;">
+                <h3 style="margin-bottom: 0.5rem;">Overall Progress</h3>
+                <p class="text-muted">Keep up the good work!</p>
+            </div>
+        </div>
+
+        <div class="stats-grid" id="statsGrid">
+            <!-- Populated by JS -->
+        </div>
+
+        <h3 style="margin-top: 3rem; margin-bottom: 1rem;">My Curricula</h3>
+        <div class="curricula-grid" id="curriculaGrid">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/performance-details.js"></script>
+    <script src="js/student-dashboard.js"></script>
+</body>
+</html>

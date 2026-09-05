@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks Management - Admin</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <style>
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            color: #666;
+        }
+        .view-section { display: none; }
+        .view-section.active { display: block; }
+    </style>
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar" id="adminSidebar">
+            <div class="admin-sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <ul class="admin-nav">
+                <li><a href="admin-dashboard.html">📊 Dashboard</a></li>
+                <li><a href="admin-students.html">👨‍🎓 Students</a></li>
+                <li><a href="admin-curricula.html">📚 Curricula</a></li>
+                <li><a href="admin-lessons.html">📖 Lessons</a></li>
+                <li><a href="admin-tasks.html" class="active">📝 Tasks</a></li>
+                <li><a href="admin-reports.html">📈 Reports</a></li>
+                <li><a href="admin-tracking.html">👀 Student Tracking</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            <div class="admin-header">
+                <button class="mobile-menu-btn" onclick="document.getElementById('adminSidebar').classList.toggle('open')">☰</button>
+                <div class="admin-header-title">
+                    <h1>Tasks Management</h1>
+                </div>
+            </div>
+            
+            <div class="breadcrumb" id="breadcrumb">
+                <a onclick="showView('curricula')">All Curriculums</a>
+            </div>
+
+            <!-- VIEW 1: CURRICULUMS -->
+            <div id="view-curricula" class="view-section active">
+                <div style="margin-bottom:1rem;">
+                    <h3>Select Curriculum</h3>
+                </div>
+                <div class="card-grid" id="curriculaGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem;">
+                    <div>Loading...</div>
+                </div>
+            </div>
+
+            <!-- VIEW 2: LESSONS -->
+            <div id="view-lessons" class="view-section">
+                <div style="margin-bottom:1rem;">
+                    <h3>Lessons in this Curriculum</h3>
+                </div>
+                <div class="card-grid" id="lessonsGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem;">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+
+            <!-- VIEW 3: TASKS IN A LESSON -->
+            <div id="view-tasks" class="view-section">
+                <div style="display:flex; justify-content:space-between; align-items: center; margin-bottom:1rem;">
+                    <h3>Tasks (Quizzes) for Lesson</h3>
+                    <button class="btn btn-primary" id="addTaskBtn">+ Add Task / Import JSON</button>
+                </div>
+                <div class="card-grid" id="tasksGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+            
+            <!-- VIEW 4: QUESTIONS IN A TASK -->
+            <div id="view-questions" class="view-section">
+                <div class="card" style="margin-bottom: 1rem;" id="taskDetailCard">
+                    <!-- Task Details Rendered by JS -->
+                </div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:1rem;">
+                    <h3>Questions inside Task</h3>
+                </div>
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Question</th>
+                                <th>Type</th>
+                                <th>Options</th>
+                                <th>Correct Answer</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody id="questionsTableBody">
+                            <tr><td colspan="6" style="text-align: center;">No questions found.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/admin-tasks.js"></script>
+</body>
+</html>

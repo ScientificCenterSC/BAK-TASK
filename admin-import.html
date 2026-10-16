@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import JSON - Admin</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar" id="adminSidebar">
+            <div class="admin-sidebar-header">
+                <h2>🎓 Admin Panel</h2>
+            </div>
+            <ul class="admin-nav">
+                <li><a href="admin-dashboard.html">📊 Dashboard</a></li>
+                <li><a href="admin-students.html">👥 Students</a></li>
+                <li><a href="admin-curricula.html">📚 Curricula</a></li>
+                <li><a href="admin-lessons.html">📝 Lessons</a></li>
+                <li><a href="admin-tasks.html">✅ Tasks</a></li>
+                
+                <li><a href="admin-exams.html">📝 Offline Exams</a></li>
+                <li><a href="admin-attendance.html">📅 Attendance</a></li>
+                <li><a href="admin-reports.html">📈 Reports</a></li>
+                <li><a href="admin-matrix.html">📊 Tasks Matrix</a></li>
+                <li><a href="admin-tracking.html">👀 Student Tracking</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            <div class="admin-header">
+                <button class="mobile-menu-btn" onclick="document.getElementById('adminSidebar').classList.toggle('open')">☰</button>
+                <div class="admin-header-title">
+                    <h1>Import JSON Wizard</h1>
+                </div>
+            </div>
+
+            <div class="import-wizard">
+                <div id="step1" class="wizard-step active">
+                    <h3>Step 1: Upload JSON File</h3>
+                    <div class="drop-zone" id="dropZone">
+                        <p>Drag & drop your JSON file here or click to browse.</p>
+                        <input type="file" id="fileInput" accept=".json" style="display:none;">
+                        <button class="btn btn-secondary mt-2" onclick="document.getElementById('fileInput').click()">Browse File</button>
+                    </div>
+                </div>
+
+                <div id="step2" class="wizard-step">
+                    <h3>Step 2: Preview & Select Destination</h3>
+                    <div class="form-group" style="margin-bottom:1rem;">
+                        <label>Select Curriculum</label>
+                        <select id="currSelect" class="form-control" style="width:100%; padding:0.5rem;"></select>
+                    </div>
+                    <div class="form-group" style="margin-bottom:1rem;">
+                        <label>Select Lesson</label>
+                        <select id="lessonSelect" class="form-control" style="width:100%; padding:0.5rem;"></select>
+                    </div>
+                    <div class="form-group" style="margin-bottom:1rem;">
+                        <label>Task Title (Optional, defaults to Task N)</label>
+                        <input type="text" id="importTaskTitle" class="form-control" placeholder="e.g. Quiz 1" style="width:100%; padding:0.5rem;">
+                    </div>
+                    <div class="form-group" style="margin-bottom:1rem;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.4rem;">
+                            <label style="margin:0;">Deadline (تاريخ ووقت الانتهاء)</label>
+                            <label style="display:flex; align-items:center; gap:0.4rem; cursor:pointer; font-weight:600; color:#10B981; font-size:0.85rem;">
+                                <input type="checkbox" id="importNoDeadline">
+                                بدون ديد لاين (تظل المهام مفتوحة دائماً)
+                            </label>
+                        </div>
+                        <div style="display:flex; gap:1rem;">
+                            <div style="flex:1;">
+                                <input type="datetime-local" id="importDeadline" class="form-control" style="width:100%; padding:0.5rem;">
+                            </div>
+                            <div style="flex:1; display:flex; align-items:center;">
+                                <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
+                                    <input type="checkbox" id="importAllowLate" style="width:18px; height:18px;">
+                                    Allow Late Submissions
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom:1.25rem; padding:0.75rem; background:rgba(99,102,241,0.08); border-radius:8px; border:1px solid rgba(99,102,241,0.2);">
+                        <label style="display:flex; align-items:center; gap:0.6rem; cursor:pointer; margin:0; font-weight:600;">
+                            <input type="checkbox" id="importEnableBlock" style="width:18px; height:18px;" checked>
+                            <span>🛡️ تفعيل نظام البلوك (قفل التاسك على الطالب في حال تبديل التاب أو الخروج من النافذة)</span>
+                        </label>
+                    </div>
+                    <div class="admin-table-container" style="max-height:300px; overflow-y:auto; margin-bottom:1rem;">
+                        <table class="admin-table">
+                            <thead><tr><th>Type</th><th>Question</th><th>Points</th></tr></thead>
+                            <tbody id="previewBody"></tbody>
+                        </table>
+                    </div>
+                    <div style="display:flex; justify-content:space-between;">
+                        <button class="btn btn-secondary" onclick="resetWizard()">Back</button>
+                        <button class="btn btn-primary" id="confirmImportBtn">Confirm Import</button>
+                    </div>
+                </div>
+
+                <div id="step3" class="wizard-step">
+                    <h3>Step 3: Results</h3>
+                    <div id="resultsMsg" style="padding:2rem; text-align:center; font-size:1.25rem;"></div>
+                    <div style="text-align:center; margin-top:2rem;">
+                        <button class="btn btn-primary" onclick="resetWizard()">Import Another File</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/config.js" defer></script>
+    <script src="js/api.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/ui.js" defer></script>
+    <script src="js/admin-import.js" defer></script>
+</body>
+</html>

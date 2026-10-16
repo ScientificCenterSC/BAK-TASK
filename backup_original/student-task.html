@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Solving</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/student.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <button class="btn btn-outline" id="backBtn" style="margin-right: 1rem;">← Back</button>
+            <span style="font-weight: 500;">Task</span>
+        </div>
+        <div class="navbar-menu">
+            <span class="task-points" id="taskPointsDisplay" style="margin-right: 1rem;"></span>
+        </div>
+    </nav>
+
+    <div class="task-solving-container">
+        <div id="loadingState">Loading task...</div>
+        
+        <div id="taskContent" style="display: none;">
+            <div class="task-question" id="questionText"></div>
+            
+<div id="countdownTimer" style="display:none; text-align:center; margin-bottom:1.5rem; padding:1rem; background:var(--card-bg); border-radius:var(--radius-sm); border:1px solid var(--border-color);">
+    <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.5rem;">⏱ Time Remaining</div>
+    <div id="countdownDisplay" style="font-size:1.5rem; font-weight:700; color:var(--warning); font-family:monospace; letter-spacing:2px;"></div>
+</div>
+
+            <div id="answerArea">
+                <!-- Inputs rendered here -->
+            </div>
+            
+            <div class="task-actions">
+                <button class="btn btn-primary" id="submitBtn">Submit Answer</button>
+            </div>
+        </div>
+        
+        <div id="resultArea" class="task-result" style="display: none;">
+            <!-- Result rendered here -->
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/student-task.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exams - Admin</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar" id="adminSidebar">
+            <div class="admin-sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <ul class="admin-nav">
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
+                <li><a href="admin-students.html">Students</a></li>
+                <li><a href="admin-curricula.html">Curricula</a></li>
+                <li><a href="admin-lessons.html">Lessons</a></li>
+                <li><a href="admin-tasks.html">Tasks</a></li>
+                <li><a href="admin-exams.html" class="active">📝 Offline Exams</a></li>
+                <li><a href="admin-attendance.html">📅 Attendance</a></li>
+                <li><a href="admin-reports.html">Reports</a></li>
+                <li><a href="admin-tracking.html">Student Tracking</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="admin-header-title">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">≡</button>
+                    <h1>Offline Exams</h1>
+                </div>
+                <div class="admin-header-actions">
+                    <button class="btn btn-primary" id="addExamBtn" style="display:none;">+ Add Exam</button>
+                </div>
+            </header>
+
+            <!-- Group Selection -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3>Select Group (Curriculum)</h3>
+                <select id="curriculumSelect" class="form-control" style="max-width: 400px; margin-top: 1rem;">
+                    <option value="">-- Loading... --</option>
+                </select>
+            </div>
+
+            <!-- View 1: Exams List -->
+            <div id="view-exams" class="view-section active" style="display:block;">
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Exam Name</th>
+                                <th>Group</th>
+                                <th>Max Score</th>
+                                <th>Created At</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="examsTableBody">
+                            <tr><td colspan="5" style="text-align:center;">Please select a group above.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- View 2: Enter Scores -->
+            <div id="view-scores" class="view-section" style="display:none;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1rem;">
+                    <div>
+                        <button class="btn btn-secondary" id="backToExamsBtn">← Back to Exams</button>
+                        <h2 id="currentExamName" style="display:inline-block; margin-left: 1rem; color: var(--primary);"></h2>
+                    </div>
+                    <button class="btn btn-primary" id="saveScoresBtn">Save Scores</button>
+                </div>
+                
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Student Code</th>
+                                <th>Student Name</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id="scoresTableBody">
+                            <tr><td colspan="3" style="text-align:center;">Loading students...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/admin-exams.js"></script>
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('adminSidebar').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

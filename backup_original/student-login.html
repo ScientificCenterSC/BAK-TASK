@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/student.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f8fafc;
+            margin: 0;
+        }
+        .login-card {
+            background-color: var(--color-white);
+            padding: 3rem 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .login-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        .login-card h2 {
+            margin-bottom: 2rem;
+            color: var(--color-dark);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--color-gray-700);
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--color-gray-300);
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+        }
+        .btn-block {
+            width: 100%;
+            padding: 0.75rem;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+        #loginError {
+            color: var(--color-danger);
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: var(--color-gray-600);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-link:hover {
+            color: var(--color-primary);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <div class="login-icon">🎓</div>
+        <h2>Student Login</h2>
+        
+        <form id="studentLoginForm">
+            <div class="form-group">
+                <label for="studentCode">Student Code</label>
+                <input type="text" id="studentCode" placeholder="Enter your code" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block" id="loginBtn">Login</button>
+            <div id="loginError"></div>
+        </form>
+        
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    
+    <script>
+        document.getElementById('studentLoginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const code = document.getElementById('studentCode').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const errorDiv = document.getElementById('loginError');
+            const btn = document.getElementById('loginBtn');
+            
+            if(!code || !password) return;
+            
+            errorDiv.style.display = 'none';
+            btn.disabled = true;
+            btn.textContent = 'Logging in...';
+            
+            try {
+                // Call Auth.login
+                await Auth.login(code, password);
+                
+                // Check if user is actually a student
+                const session = Auth.getSession();
+                if(session && session.role === 'student') {
+                    window.location.href = 'student-dashboard.html';
+                } else {
+                    throw new Error('Not authorized as student');
+                }
+            } catch (error) {
+                errorDiv.textContent = error.message || 'Login failed. Please check your credentials.';
+                errorDiv.style.display = 'block';
+                // Reset auth state on failure just in case
+                Auth.logout();
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Login';
+            }
+        });
+        
+        // If already logged in, redirect
+        const session = Auth.getSession();
+        if(session && session.role === 'student') {
+            window.location.href = 'student-dashboard.html';
+        }
+    </script>
+</body>
+</html>

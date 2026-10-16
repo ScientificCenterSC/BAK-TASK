@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Learning Platform</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .hero {
+            background-color: var(--color-white);
+            padding: 4rem 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            max-width: 600px;
+            width: 100%;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--color-dark);
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--color-gray-600);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .btn-large {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--color-white);
+            border-top: 1px solid var(--color-gray-200);
+        }
+        .admin-link {
+            color: var(--color-gray-400);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .admin-link:hover {
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="hero">
+            <h1>Student Learning Platform</h1>
+            <p>Welcome to your digital classroom. Access your curricula, complete lessons, and track your progress all in one place. Your journey to success starts here.</p>
+            <button class="btn btn-primary btn-large" onclick="window.location.href='student-login.html'">Login as Student</button>
+        </div>
+    </main>
+
+    <footer>
+        <small class="admin-link" onclick="window.location.href='admin-login.html'">© 2026 All Rights Reserved</small>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+</body>
+</html>

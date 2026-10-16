@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons Management - Admin</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <style>
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .breadcrumb a {
+            color: var(--primary, #4f46e5);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb span {
+            color: #666;
+        }
+        .view-section { display: none; }
+        .view-section.active { display: block; }
+    </style>
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="admin-sidebar" id="adminSidebar">
+            <div class="admin-sidebar-header">
+                <h2>🎓 Admin Panel</h2>
+            </div>
+            <ul class="admin-nav">
+                <li><a href="admin-dashboard.html">📊 Dashboard</a></li>
+                <li><a href="admin-students.html">👥 Students</a></li>
+                <li><a href="admin-curricula.html">📚 Curricula</a></li>
+                <li><a href="admin-lessons.html" class="active">📝 Lessons</a></li>
+                <li><a href="admin-tasks.html">✅ Tasks</a></li>
+                
+                <li><a href="admin-exams.html">📝 Offline Exams</a></li>
+                <li><a href="admin-attendance.html">📅 Attendance</a></li>
+                <li><a href="admin-reports.html">📈 Reports</a></li>
+                <li><a href="admin-tracking.html">👀 Student Tracking</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            <div class="admin-header">
+                <button class="mobile-menu-btn" onclick="document.getElementById('adminSidebar').classList.toggle('open')">☰</button>
+                <div class="admin-header-title">
+                    <h1>Lessons Management</h1>
+                </div>
+            <div class="breadcrumb" id="breadcrumb">
+                <!-- Populated dynamically -->
+            </div>
+
+            <!-- VIEW 1: COURSES -->
+            <div id="view-courses" class="view-section active">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                    <h3>Courses (Curricula)</h3>
+                </div>
+                <div class="card-grid" id="coursesGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+
+            <!-- VIEW 2: LESSONS -->
+            <div id="view-lessons" class="view-section">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                    <h3 id="lessonsCourseTitle">Lessons</h3>
+                    <button class="btn btn-primary" id="addLessonBtn">+ Add Lesson</button>
+                </div>
+                <div class="card-grid" id="lessonsGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem;">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+
+            <!-- VIEW 3: LESSON DETAILS (Files) -->
+            <div id="view-lesson-details" class="view-section">
+                <div class="card" id="lessonDetailCard" style="margin-bottom: 1rem; border-left: 4px solid var(--primary);">
+                    <!-- Rendered by JS -->
+                </div>
+                
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; background: var(--card-bg); padding: 1rem; border-radius: 8px; border: 1px solid var(--border-color);">
+                    <h3 style="margin:0;">Lesson Files</h3>
+                    <div style="display:flex; gap: 0.5rem; align-items: center;">
+                        <input type="file" id="lessonFileInput" multiple class="form-control" style="max-width: 250px;">
+                        <button class="btn btn-success" id="uploadFilesBtn">Upload</button>
+                    </div>
+                </div>
+                
+                <div id="filesGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/admin-lessons.js"></script>
+</body>
+</html>

@@ -1,0 +1,577 @@
+[
+  {
+    "title": "السؤال الأول",
+    "question": {
+      "ar": "القاهرة هي عاصمة جمهورية مصر العربية.",
+      "en": "Cairo is the capital of the Arab Republic of Egypt."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "القاهرة هي عاصمة جمهورية مصر العربية.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الثاني",
+    "question": {
+      "ar": "عدد كواكب المجموعة الشمسية هو 9 كواكب.",
+      "en": "The number of planets in the solar system is 9."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "خطأ",
+    "explanation": "عدد كواكب المجموعة الشمسية هو 8 كواكب، بينما بلوتو يُصنف ككوكب قزم.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الثالث",
+    "question": {
+      "ar": "HTML هي لغة تُستخدم لبناء هيكل صفحات الويب.",
+      "en": "HTML is a language used to build the structure of web pages."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "HTML هي اللغة الأساسية المستخدمة لإنشاء هيكل ومحتوى صفحات الويب.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الرابع",
+    "question": {
+      "ar": "الشمس كوكب من كواكب المجموعة الشمسية.",
+      "en": "The sun is a planet in the solar system."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "خطأ",
+    "explanation": "الشمس نجم وليست كوكبًا.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الخامس",
+    "question": {
+      "ar": "الماء يتكون من ذرتي هيدروجين وذرة أكسجين.",
+      "en": "Water consists of two hydrogen atoms and one oxygen atom."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "الصيغة الكيميائية للماء هي H2O، أي ذرتان من الهيدروجين وذرة من الأكسجين.",
+    "points": 5
+  },
+  {
+    "title": "السؤال السادس",
+    "question": {
+      "ar": "الأرض هي أكبر كواكب المجموعة الشمسية.",
+      "en": "Earth is the largest planet in the solar system."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "خطأ",
+    "explanation": "كوكب المشتري هو أكبر كواكب المجموعة الشمسية.",
+    "points": 5
+  },
+  {
+    "title": "السؤال السابع",
+    "question": {
+      "ar": "اللغة العربية تُكتب من اليمين إلى اليسار.",
+      "en": "The Arabic language is written from right to left."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "اللغة العربية من اللغات التي تُكتب وتُقرأ من اليمين إلى اليسار.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الثامن",
+    "question": {
+      "ar": "الكمبيوتر لا يستطيع تنفيذ العمليات الحسابية.",
+      "en": "A computer cannot perform arithmetic operations."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "خطأ",
+    "explanation": "الكمبيوتر يستطيع تنفيذ العمليات الحسابية والمنطقية بسرعة كبيرة.",
+    "points": 5
+  },
+  {
+    "title": "السؤال التاسع",
+    "question": {
+      "ar": "CSS تُستخدم لتنسيق وتصميم صفحات الويب.",
+      "en": "CSS is used to style and design web pages."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "CSS تُستخدم للتحكم في مظهر صفحات الويب مثل الألوان والخطوط والأحجام والتخطيط.",
+    "points": 5
+  },
+  {
+    "title": "السؤال العاشر",
+    "question": {
+      "ar": "JavaScript هي لغة برمجة تُستخدم لإضافة التفاعل إلى صفحات الويب.",
+      "en": "JavaScript is a programming language used to add interactivity to web pages."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "JavaScript تُستخدم لإضافة التفاعل والسلوك الديناميكي إلى صفحات الويب.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الحادي عشر",
+    "question": {
+      "ar": "القمر يصدر ضوءه من نفسه.",
+      "en": "The moon emits its own light."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "خطأ",
+    "explanation": "القمر لا يصدر ضوءًا من نفسه، وإنما يعكس ضوء الشمس.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الثاني عشر",
+    "question": {
+      "ar": "الإنسان يحتاج إلى الأكسجين للتنفس.",
+      "en": "Humans need oxygen to breathe."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "يحتاج جسم الإنسان إلى الأكسجين لإتمام عملية التنفس الخلوي وإنتاج الطاقة.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الثالث عشر",
+    "question": {
+      "ar": "أفريقيا هي أكبر قارات العالم مساحةً.",
+      "en": "Africa is the largest continent in the world by area."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "خطأ",
+    "explanation": "آسيا هي أكبر قارات العالم من حيث المساحة.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الرابع عشر",
+    "question": {
+      "ar": "الرقم الثنائي 1 و0 هما أساس نظام العد الثنائي.",
+      "en": "The binary digits 1 and 0 are the basis of the binary numeral system."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "نظام العد الثنائي يعتمد على رقمين فقط هما 0 و1.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الخامس عشر",
+    "question": {
+      "ar": "RAM هي ذاكرة دائمة لا تفقد البيانات عند إيقاف تشغيل الكمبيوتر.",
+      "en": "RAM is a permanent memory that does not lose data when the computer is turned off."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "خطأ",
+    "explanation": "RAM ذاكرة مؤقتة وتفقد محتوياتها عادةً عند إيقاف تشغيل الجهاز.",
+    "points": 5
+  },
+  {
+    "title": "السؤال السادس عشر",
+    "question": {
+      "ar": "المحيط الهادئ هو أكبر محيطات العالم.",
+      "en": "The Pacific Ocean is the largest ocean in the world."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "المحيط الهادئ هو أكبر محيطات العالم من حيث المساحة.",
+    "points": 5
+  },
+  {
+    "title": "السؤال السابع عشر",
+    "question": {
+      "ar": "Python هي إحدى لغات البرمجة.",
+      "en": "Python is a programming language."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "Python لغة برمجة عالية المستوى وتُستخدم في مجالات متعددة مثل تطوير الويب وتحليل البيانات والذكاء الاصطناعي.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الثامن عشر",
+    "question": {
+      "ar": "HTML اختصار لـ HyperText Markup Language.",
+      "en": "HTML stands for HyperText Markup Language."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "HTML هو اختصار لعبارة HyperText Markup Language.",
+    "points": 5
+  },
+  {
+    "title": "السؤال التاسع عشر",
+    "question": {
+      "ar": "الشبكة العنكبوتية العالمية World Wide Web هي نفسها الإنترنت تمامًا.",
+      "en": "The World Wide Web is exactly the same as the Internet."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "خطأ",
+    "explanation": "الويب خدمة تعمل عبر الإنترنت، بينما الإنترنت هو البنية والشبكة التي تربط الأجهزة ببعضها.",
+    "points": 5
+  },
+  {
+    "title": "السؤال العشرون",
+    "question": {
+      "ar": "البكتيريا كلها ضارة للإنسان.",
+      "en": "All bacteria are harmful to humans."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "خطأ",
+    "explanation": "ليست كل البكتيريا ضارة؛ بعض أنواع البكتيريا مفيدة وتوجد بشكل طبيعي في جسم الإنسان والبيئة.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الحادي والعشرون",
+    "question": {
+      "ar": "الذهب عنصر كيميائي رمزه Au.",
+      "en": "Gold is a chemical element with the symbol Au."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "رمز الذهب الكيميائي هو Au.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الثاني والعشرون",
+    "question": {
+      "ar": "يمكن استخدام محرك البحث للوصول إلى المعلومات الموجودة على الإنترنت.",
+      "en": "A search engine can be used to access information on the Internet."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "محركات البحث تساعد المستخدمين في العثور على المعلومات والمواقع الموجودة على الإنترنت.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الثالث والعشرون",
+    "question": {
+      "ar": "الملف الذي ينتهي بالامتداد .jpg يكون عادةً ملفًا صوتيًا.",
+      "en": "A file ending with the extension .jpg is usually an audio file."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "خطأ",
+    "explanation": "امتداد JPG يُستخدم عادةً لملفات الصور.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الرابع والعشرون",
+    "question": {
+      "ar": "يمكن أن تحتوي صفحة HTML على صور وروابط ونصوص.",
+      "en": "An HTML page can contain images, links, and text."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "يمكن لصفحات HTML أن تحتوي على النصوص والصور والروابط والعديد من العناصر الأخرى.",
+    "points": 5
+  },
+  {
+    "title": "السؤال الخامس والعشرون",
+    "question": {
+      "ar": "الذكاء الاصطناعي هو مجال يهتم بتطوير أنظمة تستطيع أداء مهام تتطلب عادةً قدرات بشرية.",
+      "en": "Artificial intelligence is a field concerned with developing systems that can perform tasks that normally require human intelligence."
+    },
+    "type": "true_false",
+    "options": [
+      {
+        "ar": "صح",
+        "en": "True",
+        "value": "صح"
+      },
+      {
+        "ar": "خطأ",
+        "en": "False",
+        "value": "خطأ"
+      }
+    ],
+    "correct_answer": "صح",
+    "explanation": "الذكاء الاصطناعي يهتم بتطوير أنظمة قادرة على تنفيذ مهام مثل التعلم والاستنتاج وفهم اللغة والتعرف على الأنماط.",
+    "points": 5
+  }
+]

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/student.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <button class="btn btn-outline" id="backBtn" style="margin-right: 1rem;">← Back</button>
+        </div>
+        <div class="navbar-menu">
+            <button class="btn btn-outline" onclick="Auth.logout(); window.location.href='student-login.html'">Logout</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="card" style="margin-bottom: 2rem;">
+            <h2 id="lessonName">Loading Lesson...</h2>
+            <p id="lessonDesc" class="text-muted"></p>
+        </div>
+        
+        <div id="cheatingBannerContainer" style="display: none;">
+            <div style="background:#FEE2E2;border:2px solid #DC2626;border-radius:12px;padding:2rem;text-align:center;margin:2rem 0;">
+                <div style="font-size:3rem;">🚫</div>
+                <h2 style="color:#DC2626;">Lesson Locked — Cheating Detected</h2>
+                <p>You cannot access the tasks in this lesson anymore.</p>
+                <a href="javascript:history.back()" class="btn btn-secondary" style="margin-top: 1rem; display: inline-block;">Go Back</a>
+            </div>
+        </div>
+
+        <div id="lessonMaterialsContainer" style="display: none; margin-bottom: 2rem;">
+            <h3>Lesson Materials</h3>
+            <div id="lessonMaterialsList" style="display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+        
+        <div id="tasksContainer">
+            <h3>Tasks</h3>
+            <div class="task-list" id="tasksList">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/student-lesson.js"></script>
+</body>
+</html>
